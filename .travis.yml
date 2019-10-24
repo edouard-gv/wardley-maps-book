@@ -4,4 +4,10 @@ before_install:
 branches:
   only:
     - master
-script: asciidoctor -v -D docs wardley-maps-book.adoc
+script: asciidoctor wardley-maps-book.adoc -o index.html
+deploy:
+  provider: releases
+  api_key: $API_KEY
+  file: index.html
+  skip_cleanup: true
+  draft: true
