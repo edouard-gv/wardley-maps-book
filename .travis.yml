@@ -4,4 +4,4 @@ before_install:
 branches:
   only:
     - master
-script: asciidoctor wardley-maps-book.adoc -o docs/index.html
+script: asciidoctorshoulfail wardley-maps-book.adoc -o docs/index.html
